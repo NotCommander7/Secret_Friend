@@ -6,12 +6,18 @@ let friends = [];
 
 
 // funcion para agregar amigos
-
+function addFriend (){
 let capture = document.getElementById('amigo').value; // capturamos lo que ingrese el usuario
 
-if (capture === ''){
+if (capture === ''){ // validamos que si se haya ingresado algún valor
     alert("Please, enter a name");
 } else{
     friends.push(capture);
     capture.getElementById('amigo').value = ''; // limpiamos el campo de entrada
+}
+
+}
+
+function recorrido (){
+     
 }
