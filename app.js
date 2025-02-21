@@ -11,13 +11,22 @@ let capture = document.getElementById('amigo').value; // capturamos lo que ingre
 
 if (capture === ''){ // validamos que si se haya ingresado algún valor
     alert("Please, enter a name");
-} else{
+} 
     friends.push(capture);
-    capture.getElementById('amigo').value = ''; // limpiamos el campo de entrada
-}
+    document.getElementById('amigo').value = ''; // limpiamos el campo de entrada
+    recorrido();
+
 
 }
 
 function recorrido (){
+     let list = document.querySelector('#listaAmigos'); //apuntamos al elemento
+     list.textContent = ''; // limpiamos la lista 
      
+    for(let i = 0; i < friends.length; i++){
+        let makeLi = document.createElement('li');
+        makeLi.textContent = friends[i];
+        list.appendChild(makeLi);
+    }
+
 }
