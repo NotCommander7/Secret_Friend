@@ -30,3 +30,20 @@ function recorrido (){
     }
 
 }
+
+
+function sortearAmigo (){
+    if(friends.length === 0){
+        alert("Nothing has been entered 🤬🤬");
+    } else if (friends.length === 1) {
+        alert("You must add at least two friends 🐧🧟‍♂️👥");
+    } else{
+        let indiceAleatorio = friends[Math.floor(Math.random ()*friends.length)];
+        let result = document.getElementById('resultado');
+        result.textContent = '';
+        
+        let makeLi2 = document.createElement('li');
+        makeLi2.textContent = `The secret friend was: ${indiceAleatorio} `;
+        result.appendChild(makeLi2);
+    }
+}
